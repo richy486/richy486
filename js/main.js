@@ -98,11 +98,10 @@ jQuery(document).ready(function($){
 			windowHeight = $(window).height(),
 			finalLeft = (windowWidth - finalWidth)/2,
 			finalHeight = finalWidth * heightSelected/widthSelected,
-			finalTop = (windowHeight - finalHeight)/2,
+			finalTop = (windowHeight - Math.max(finalHeight, 500))/2,
 			quickViewWidth = ( windowWidth * .8 < maxQuickWidth ) ? windowWidth * .8 : maxQuickWidth ,
 			quickViewLeft = (windowWidth - quickViewWidth)/2;
-            // identifer = "#" + selectedId + ".cd-quick-view";
-            // identifer = "#".concat(selectedId, ".cd-quick-view");
+            quickViewHeight = Math.max(finalHeight, 500)
         var str1 = "#";
         var str2 = ".cd-quick-view";
         var str3 = " Have a nice day!";
@@ -116,17 +115,20 @@ jQuery(document).ready(function($){
 			    "top": topSelected,
 			    "left": leftSelected,
 			    "width": widthSelected,
+                "height": heightSelected,
 			}).velocity({
 				//animate the quick view: animate its width and center it in the viewport
 				//during this animation, only the slider image is visible
 			    'top': finalTop+ 'px',
 			    'left': finalLeft+'px',
 			    'width': finalWidth+'px',
+                'height': finalHeight+'px',
 			}, 1000, [ 400, 20 ], function(){
 				//animate the quick view: animate its width to the final value
 				$(identifer).addClass('animate-width').velocity({
 					'left': quickViewLeft+'px',
 			    	'width': quickViewWidth+'px',
+                    'height': quickViewHeight+'px',
 				}, 300, 'ease' ,function(){
 					//show quick view content
 					$(identifer).addClass('add-content');
@@ -138,12 +140,14 @@ jQuery(document).ready(function($){
 			    'top': finalTop+ 'px',
 			    'left': finalLeft+'px',
 			    'width': finalWidth+'px',
+                'height': finalHeight+'px',
 			}, 300, 'ease', function(){
 				$('body').removeClass('overlay-layer');
 				$(identifer).removeClass('animate-width').velocity({
 					"top": topSelected,
 				    "left": leftSelected,
 				    "width": widthSelected,
+                    "height": heightSelected,
 				}, 500, 'ease', function(){
 					$(identifer).removeClass('is-visible');
 					parentListItem.removeClass('empty-box');
