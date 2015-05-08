@@ -98,10 +98,10 @@ jQuery(document).ready(function($){
 			windowHeight = $(window).height(),
 			finalLeft = (windowWidth - finalWidth)/2,
 			finalHeight = finalWidth * heightSelected/widthSelected,
-			finalTop = (windowHeight - Math.max(finalHeight, 500))/2,
+			finalTop = (windowHeight - Math.max(finalHeight, $(window).height() * 0.9))/2,
 			quickViewWidth = ( windowWidth * .8 < maxQuickWidth ) ? windowWidth * .8 : maxQuickWidth ,
 			quickViewLeft = (windowWidth - quickViewWidth)/2;
-            quickViewHeight = Math.max(finalHeight, 500)
+            quickViewHeight = Math.max(finalHeight, $(window).height() * 0.9)
         var str1 = "#";
         var str2 = ".cd-quick-view";
         var str3 = " Have a nice day!";

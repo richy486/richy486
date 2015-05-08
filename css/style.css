@@ -2,6 +2,8 @@
 
 Primary style
 
+http://www.colourlovers.com/palette/92095/Giant_Goldfish
+
 -------------------------------- */
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
@@ -16,8 +18,8 @@ Primary style
 body {
   font-size: 100%;
   font-family: "PT Sans", sans-serif;
-  color: #3e585f;
-  background-color: #47374e;
+  color: #A7DBD8;
+  background-color: #E0E4CC;
 }
 body::after {
   /* dark overlay layer - visible when we fire .cd-quick-view */
@@ -26,7 +28,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(71, 55, 78, 0.8);
+  background: rgba(224,228,204, 0.8);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -44,7 +46,7 @@ body::after {
 }
 
 a {
-  color: #f82f53;
+  color: #FA6900;
   text-decoration: none;
 }
 
@@ -87,7 +89,7 @@ header {
   -moz-osx-font-smoothing: grayscale;
 }
 header h1 {
-  color: #ffffff;
+  color: #FA6900;
   font-size: 20px;
   font-size: 1.25rem;
 }
@@ -351,7 +353,7 @@ header h1 {
   opacity: .2;
 }
 .no-touch .cd-slider-navigation li a:hover {
-  background: rgba(71, 55, 78, 0.8);
+  background: rgba(167, 219, 216, 0.8);
   opacity: 1;
 }
 .touch .cd-slider-navigation li a {
@@ -388,7 +390,7 @@ header h1 {
 .cd-item-info p {
   line-height: 1.6;
   margin: 1em 0;
-  color: #67919c;
+  color: #69D2E7;
 }
 .cd-item-info .cd-item-action li {
   display: inline-block;
@@ -406,7 +408,7 @@ header h1 {
   border-radius: 0.25em;
   border: none;
   padding: .6em 1.2em;
-  background-color: #f82f53;
+  background-color: #FA6900;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
