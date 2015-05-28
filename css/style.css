@@ -165,12 +165,12 @@ header h1 {
 
 .cd-trigger {
   position: absolute;
-  height: 50px;
+  height: 100%;
   line-height: 50px;
   width: 100%;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0);
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
