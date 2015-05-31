@@ -84,19 +84,19 @@ html, body {
 header {
   position: relative;
   height: 160px;
-  line-height: 170px;
+  line-height: 130px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 header h1 {
-  color: #FA6900;
+  color: #444444;
   font-size: 20px;
   font-size: 2.5rem;
 }
 @media only screen and (min-width: 768px) {
   header {
-    line-height: 180px;
+    line-height: 140px;
   }
   header h1 {
     font-size: 26px;
@@ -105,13 +105,13 @@ header h1 {
 }
 @media only screen and (min-width: 1024px) {
   header {
-    line-height: 220px;
+    line-height: 180px;
   }
 }
 
 .subtitle {
   text-align: center;
-  width: 50%;
+  width: 35em;
 }
 
 
@@ -126,6 +126,16 @@ header h1 {
     width: 32px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.categories {
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .categories {
+        display: block;
+    }
 }
 
 
@@ -425,18 +435,24 @@ header h1 {
 .cd-item-info h2 {
   font-size: 28px;
   font-size: 1.75rem;
+  margin-left: 450px;
 }
 .cd-item-info p {
   line-height: 1.6;
   margin: 1em 0;
-  color: #69D2E7;
+  color: #444444;
+  margin-left: 450px;
+
 }
 .cd-item-info .cd-item-action li {
-  display: inline-block;
+  /*display: inline-block;*/
   margin-right: 1em;
+  margin-left: 450px;
+  padding-top: 5px;
 }
 .cd-item-info .cd-item-action li:first-child {
-  margin-left: -4px;
+  /*margin-left: -4px;*/
+  /*margin-left: 450px;*/
 }
 .cd-item-info .add-to-cart {
   -webkit-appearance: none;
