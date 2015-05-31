@@ -233,4 +233,7 @@ jQuery(document).ready(function($){
 		    "width": selectedWidth,
 		});
 	}
+    $(window).resize(function() {
+        closeQuickView( sliderFinalWidth, maxQuickWidth);
+    });
 });
