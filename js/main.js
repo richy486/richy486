@@ -77,11 +77,21 @@ jQuery(document).ready(function($){
 	}
 
 	function resizeQuickView() {
-		var quickViewLeft = ($(window).width() - $('.cd-quick-view').width())/2,
-			quickViewTop = ($(window).height() - $('.cd-quick-view').height())/2;
+		// var quickViewLeft = ($(window).width() - $('.cd-quick-view').width())/2,
+		// 	quickViewTop = ($(window).height() - $('.cd-quick-view').height())/2;
+
+
+        var windowWidth = $(window).width(),
+            windowHeight = $(window).height(),
+
+            quickViewWidth = ( windowWidth * .8 < maxQuickWidth ) ? windowWidth * .8 : maxQuickWidth ,
+            quickViewLeft = (windowWidth - quickViewWidth)/2,
+            quickViewHeight = $(window).height() * 0.9,
+            quickViewTop = (windowHeight - Math.max(quickViewHeight, $(window).height() * 0.9))/2; //Math.max(finalHeight, $(window).height() * 0.9)
 		$('.cd-quick-view').css({
 		    "top": quickViewTop,
 		    "left": quickViewLeft,
+            "width": quickViewWidth
 		});
 	} 
 
@@ -233,7 +243,4 @@ jQuery(document).ready(function($){
 		    "width": selectedWidth,
 		});
 	}
-    $(window).resize(function() {
-        closeQuickView( sliderFinalWidth, maxQuickWidth);
-    });
 });

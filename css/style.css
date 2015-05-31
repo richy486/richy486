@@ -121,9 +121,14 @@ header h1 {
 
 .subtitle {
   text-align: center;
-  width: 35em;
+  width: 90%;
 }
 
+@media only screen and (min-width: 768px) {
+  .subtitle {
+      width: 35em;
+    }
+}
 
 
 .socialIcon{
@@ -234,8 +239,8 @@ header h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
-  opacity: 0;
-  visibility: hidden;
+  /*opacity: 0;
+  visibility: hidden;*/
   -webkit-transition: opacity 0.2s, background-color 0.2s;
   -moz-transition: opacity 0.2s, background-color 0.2s;
   transition: opacity 0.2s, background-color 0.2s;
@@ -253,7 +258,7 @@ header h1 {
 @media only screen and (min-width: 1170px) {
   .cd-trigger {
     /* only visible on hover on big devices */
-    opacity: 0;
+    /*opacity: 0;*/
   }
 }
 
