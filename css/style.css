@@ -18,7 +18,7 @@ http://www.colourlovers.com/palette/92095/Giant_Goldfish
 body {
   font-size: 100%;
   font-family: "PT Sans", sans-serif;
-  color: #A7DBD8;
+  color: #444444;
   background-color: #F2F2F2;
 }
 body::after {
@@ -60,7 +60,8 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 .cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  /* this class is used to give a max-width to the element it is applied to, 
+  and center it horizontally when it reaches that max-width */
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
@@ -91,7 +92,7 @@ header {
 header h1 {
   color: #FA6900;
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
 }
 @media only screen and (min-width: 768px) {
   header {
@@ -99,7 +100,7 @@ header h1 {
   }
   header h1 {
     font-size: 26px;
-    font-size: 1.625rem;
+    font-size: 3.25rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -107,6 +108,26 @@ header h1 {
     line-height: 220px;
   }
 }
+
+.subtitle {
+  text-align: center;
+  width: 50%;
+}
+
+
+
+.socialIcon{
+    /*
+    background-image: url(icon@2x.png);
+    background-size: 100px 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    */
+    width: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 
 .cd-items {
   padding: 1em 0;
