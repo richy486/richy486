@@ -114,21 +114,16 @@ jQuery(document).ready(function($){
 		//store some image data (width, top position, ...)
 		//store window data to calculate quick view panel position
 
-        // <div id="gems" class="cd-quick-view">
-        //     <div class="cd-slider-wrapper">
-        //         <ul class="cd-slider">
-        //             <li class="selected"><img src="img/gems-1.png" alt="Screen shot 1"></li>
-
         var hashString = "#";
         var classString = ".cd-quick-view";
         var identifer = hashString.concat(selectedId, classString);
-
-        // .find('.cd-slider')
 
         var sliderWrapper = $(identifer).find('.cd-slider-wrapper');
         var cdSlider = sliderWrapper.find('.cd-slider');
         var selected = cdSlider.find('.selected');
         var selectedImage = selected.children('img');
+
+        var itemInfo = $(identifer).find('.cd-item-info');
 
         var identiferItem = $(identifer);
 
@@ -149,11 +144,6 @@ jQuery(document).ready(function($){
 			quickViewLeft = (windowWidth - quickViewWidth)/2,
             quickViewHeight = $(window).height() * 0.9 //Math.max(finalHeight, $(window).height() * 0.9)
 
-        // selectedHeight = 257;
-        // selectedLeft = 507.6875;
-        // selectedTop = 146;
-        // selectedWidth = 257;
-
         // image is the thumb
 
 		if( animationType == 'open') {
@@ -162,31 +152,10 @@ jQuery(document).ready(function($){
             selectedImage.addClass('empty-box');
 			//place the quick view over the image gallery and give it the dimension of the gallery image
 
-            /*
-			$(identifer).css({
-			    "top": selectedTop,
-			    "left": selectedLeft,
-			    "width": selectedWidth,
-                "height": selectedHeight,
-			}).velocity({
-				//animate the quick view: animate its width and center it in the viewport
-				//during this animation, only the slider image is visible
-			    'top': finalTop+ 'px',
-			    'left': finalLeft+'px',
-			    'width': finalWidth+'px',
-                'height': finalHeight+'px',
-			}, 1000, [ 400, 20 ], function(){
-				//animate the quick view: animate its width to the final value
-				$(identifer).addClass('animate-width').velocity({
-					'left': quickViewLeft+'px',
-			    	'width': quickViewWidth+'px',
-                    'height': quickViewHeight+'px',
-				}, 300, 'ease' ,function(){
-					//show quick view content
-					$(identifer).addClass('add-content');
-				});
-			}).addClass('is-visible');
-*/
+            itemInfo.css({
+                'margin-left': (sliderWrapper.width() + 50) + 'px'
+            });
+
             $(identifer).addClass('animate-width').css({
                 'left': quickViewLeft+'px',
                     'width': quickViewWidth+'px',
@@ -199,29 +168,9 @@ jQuery(document).ready(function($){
                 'height': quickViewHeight+'px',
             }).addClass('add-content').addClass('is-visible');
 
-            // $(identifer).addClass('add-content').addClass('is-visible');
-            
 		} else {
 			//close the quick view reverting the animation
-            /*
-			$(identifer).removeClass('add-content').velocity({
-			    'top': finalTop+ 'px',
-			    'left': finalLeft+'px',
-			    'width': finalWidth+'px',
-                'height': finalHeight+'px',
-			}, 300, 'ease', function(){
-				$('body').removeClass('overlay-layer');
-				$(identifer).removeClass('animate-width').velocity({
-					"top": selectedTop,
-				    "left": selectedLeft,
-				    "width": selectedWidth,
-                    "height": selectedHeight,
-				}, 500, 'ease', function(){
-					$(identifer).removeClass('is-visible');
-					parentListItem.removeClass('empty-box');
-				});
-			});
-            */
+
 
             $('body').removeClass('overlay-layer');
             $(identifer).removeClass('add-content').removeClass('is-visible');
