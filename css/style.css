@@ -134,12 +134,12 @@ header h1 {
 }
 @media only screen and (min-width: 768px) {
   .cd-items {
-    padding: 2em 0 0;
+    padding: 1em 0 0;
   }
 }
 @media only screen and (min-width: 1024px) {
   .cd-items {
-    padding: 4em 0 0;
+    padding: 2em 0 0;
   }
 }
 
@@ -163,14 +163,14 @@ header h1 {
 }
 @media only screen and (min-width: 1024px) {
   .cd-item {
-    width: 22%;
+    width: 26%;
     float: left;
-    margin: 0 4% 2.8em 0;
+    margin: 0 10% 1.8em 0;
   }
-  .cd-item:nth-child(2n) {
-    margin-right: 4%;
+  .cd-item:nth-child(1n) {
+    margin-right: 10%;
   }
-  .cd-item:nth-child(4n) {
+  .cd-item:nth-child(3n) {
     margin-right: 0;
   }
   .cd-item.empty-box::after {
@@ -182,6 +182,24 @@ header h1 {
     height: 100%;
     background-color: #392c3f;
   }
+}
+
+.cd-item-desc {
+    padding-top: 10px;
+    width: 100%;
+    height: 5em;
+}
+
+.cd-item-desc b {
+    font-weight: bold;
+}
+
+.cd-title {
+    font-size: 26px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-top: 1em;
+    text-align: center;
 }
 
 .cd-trigger {
