@@ -151,6 +151,8 @@ jQuery(document).ready(function($){
 			parentListItem.addClass('empty-box');
             selectedImage.addClass('empty-box');
 			//place the quick view over the image gallery and give it the dimension of the gallery image
+
+            /*
 			$(identifer).css({
 			    "top": selectedTop,
 			    "left": selectedLeft,
@@ -174,8 +176,24 @@ jQuery(document).ready(function($){
 					$(identifer).addClass('add-content');
 				});
 			}).addClass('is-visible');
+*/
+            $(identifer).addClass('animate-width').css({
+                'left': quickViewLeft+'px',
+                    'width': quickViewWidth+'px',
+                    'height': quickViewHeight+'px',
+            });
+            $(identifer).css({
+                'top': finalTop+ 'px',
+                'left': quickViewLeft+'px',
+                'width': quickViewWidth+'px',
+                'height': quickViewHeight+'px',
+            }).addClass('add-content').addClass('is-visible');
+
+            // $(identifer).addClass('add-content').addClass('is-visible');
+            
 		} else {
 			//close the quick view reverting the animation
+            /*
 			$(identifer).removeClass('add-content').velocity({
 			    'top': finalTop+ 'px',
 			    'left': finalLeft+'px',
@@ -193,6 +211,11 @@ jQuery(document).ready(function($){
 					parentListItem.removeClass('empty-box');
 				});
 			});
+            */
+
+            $('body').removeClass('overlay-layer');
+            $(identifer).removeClass('add-content').removeClass('is-visible');
+            parentListItem.removeClass('empty-box');
 		}
 	}
 	function closeNoAnimation(image, finalWidth, maxQuickWidth) {
