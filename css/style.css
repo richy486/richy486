@@ -15,10 +15,10 @@ http://www.colourlovers.com/palette/92095/Giant_Goldfish
   content: '';
 }
 
-@font-face {
+/*@font-face {
   font-family: 'breakRules';
   src: url('../fonts/Mf Break The Rules.ttf')  format('truetype');
-}
+}*/
 
 body {
   font-size: 100%;
@@ -95,10 +95,10 @@ header {
   -moz-osx-font-smoothing: grayscale;
 }
 header h1 {
-  color: #444444;
+  color: #ffffff;
   font-size: 20px;
   font-size: 2.5rem;
-  font-family: "breakRules", sans-serif;
+  font-family: "MarkerFelt-Wide", sans-serif;
 }
 @media only screen and (min-width: 768px) {
   header {
@@ -120,6 +120,7 @@ header h1 {
 }
 
 .subtitle {
+  color: #ffffff;
   text-align: center;
   width: 90%;
 }
@@ -128,6 +129,11 @@ header h1 {
   .subtitle {
       width: 35em;
     }
+}
+
+.top {
+    background-color: #D65035;
+    padding-bottom: 3em;
 }
 
 
@@ -315,11 +321,18 @@ header h1 {
   position: relative;
   display: inline-block;
   float: left;
+  display: none;
 }
 .cd-slider-wrapper:after {
   content: "";
   display: table;
   clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-slider-wrapper {
+        display: block;
+    }
 }
 
 .cd-slider {

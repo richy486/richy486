@@ -93,6 +93,19 @@ jQuery(document).ready(function($){
 		    "left": quickViewLeft,
             "width": quickViewWidth
 		});
+
+        var itemInfo = $('.cd-quick-view').find('.cd-item-info');
+        var sliderWrapper = $('.cd-quick-view').find('.cd-slider-wrapper');
+
+        if (windowWidth >= 768) {
+            itemInfo.css({
+                'margin-left': (sliderWrapper.width() + 50) + 'px'
+            });
+        } else {
+            itemInfo.css({
+                'margin-left': '20px'
+            });
+        }
 	} 
 
 	function closeQuickView(finalWidth, maxQuickWidth) {
@@ -152,9 +165,17 @@ jQuery(document).ready(function($){
             selectedImage.addClass('empty-box');
 			//place the quick view over the image gallery and give it the dimension of the gallery image
 
-            itemInfo.css({
-                'margin-left': (sliderWrapper.width() + 50) + 'px'
-            });
+            if (windowWidth >= 768) {
+                itemInfo.css({
+                        'margin-left': (sliderWrapper.width() + 50) + 'px'
+                    
+                });
+            } else {
+                itemInfo.css({
+                        'margin-left': '0px'
+                    
+                });
+            }
 
             $(identifer).addClass('animate-width').css({
                 'left': quickViewLeft+'px',
