@@ -94,6 +94,9 @@ header {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+header a {
+  color: #ffffff;
+}
 header h1 {
   color: #ffffff;
   font-size: 20px;
