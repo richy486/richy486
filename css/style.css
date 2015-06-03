@@ -159,6 +159,20 @@ header h1 {
     }
 }
 
+.cd-hidden {
+    display: none;
+    visibility: hidden;
+}
+.cd-hidden .cd-trigger {
+    display: none;
+}
+@media only screen and (min-width: 1024px) {
+    .cd-hidden {
+        display: block;
+        visibility: hidden;
+    }
+}
+
 
 .cd-items {
   padding: 1em 0;
