@@ -77,17 +77,13 @@ jQuery(document).ready(function($){
 	}
 
 	function resizeQuickView() {
-		// var quickViewLeft = ($(window).width() - $('.cd-quick-view').width())/2,
-		// 	quickViewTop = ($(window).height() - $('.cd-quick-view').height())/2;
-
-
-        var windowWidth = $(window).width(),
-            windowHeight = $(window).height(),
+		var windowWidth = $(window).width(),
+            windowHeight = window.innerHeight ? window.innerHeight : $(window).height(),
 
             quickViewWidth = ( windowWidth * .8 < maxQuickWidth ) ? windowWidth * .8 : maxQuickWidth ,
             quickViewLeft = (windowWidth - quickViewWidth)/2,
-            quickViewHeight = $(window).height() * 0.9,
-            quickViewTop = (windowHeight - Math.max(quickViewHeight, $(window).height() * 0.9))/2; //Math.max(finalHeight, $(window).height() * 0.9)
+            quickViewHeight = windowHeight * 0.9,
+            quickViewTop = (windowHeight - Math.max(quickViewHeight, windowHeight * 0.9))/2;
 		$('.cd-quick-view').css({
 		    "top": quickViewTop,
 		    "left": quickViewLeft,
@@ -149,13 +145,13 @@ jQuery(document).ready(function($){
 			selectedWidth = image.width(),
 			selectedHeight = selectedWidth,//image.height(),
 			windowWidth = $(window).width(),
-			windowHeight = $(window).height(),
+			windowHeight = window.innerHeight ? window.innerHeight : $(window).height(),
 			finalLeft = (windowWidth - finalWidth)/2,
 			finalHeight = finalWidth * selectedHeight/selectedWidth,
-			finalTop = (windowHeight - Math.max(finalHeight, $(window).height() * 0.9))/2,
+			finalTop = (windowHeight - Math.max(finalHeight, windowHeight * 0.9))/2,
 			quickViewWidth = ( windowWidth * .8 < maxQuickWidth ) ? windowWidth * .8 : maxQuickWidth ,
 			quickViewLeft = (windowWidth - quickViewWidth)/2,
-            quickViewHeight = $(window).height() * 0.9 //Math.max(finalHeight, $(window).height() * 0.9)
+            quickViewHeight = windowHeight * 0.9
 
         // image is the thumb
 
